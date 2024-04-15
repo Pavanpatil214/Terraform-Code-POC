@@ -4,6 +4,11 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
+env:
+  ARM_CLIENT_ID: ${{secrets.CLIENTID}}
+  ARM_CLIENT_SECRET: ${{secrets.CLIENTSECRET}}
+  ARM_SUBSCRIPTION_ID: ${{secrets.SUBSCRIPTIONID}}
+  ARM_TENANT_ID: ${{secrets.TENANTID}}
 
 permissions:
   contents: read
@@ -23,11 +28,6 @@ jobs:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
-
-    - name: Login to Azure
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
