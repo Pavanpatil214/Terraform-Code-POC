@@ -30,19 +30,14 @@ jobs:
       with:
         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
-    - name: Use variables
-      run: |
-        echo "repository AZURE_SUBSCRIPTION_ID : ${{ env.AZURE_SUBSCRIPTION_ID }}"
-        echo " env.AZURE_CLIENT_ID : ${{ env.AZURE_CLIENT_ID }}"
-
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: terraform init
       env:
-        ARM_SUBSCRIPTION_ID: ${{ env.AZURE_SUBSCRIPTION_ID }}
-        ARM_CLIENT_ID: ${{ env.AZURE_CLIENT_ID }}
-        ARM_CLIENT_SECRET: ${{ env.AZURE_CLIENT_SECRET }}
-        ARM_TENANT_ID: ${{ env.AZURE_TENANT_ID }}
+        ARM_SUBSCRIPTION_ID: "727e5622-2c60-4022-809b-79b8670e3a6d"
+        ARM_CLIENT_ID: "0d95a0b4-e452-4763-9a8a-ac73fa502365"
+        ARM_CLIENT_SECRET: "Jaz8Q~yRHmMnwGK~Ue8YpiqqxfnDB7IvIcWTDcQ0"
+        ARM_TENANT_ID: "fd41ee0d-0d97-4102-9a50-c7c3c5470454"
         ARM_ENVIRONMENT: public
 
     # Checks that all Terraform configuration files adhere to a canonical format
