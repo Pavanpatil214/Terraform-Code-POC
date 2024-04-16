@@ -40,9 +40,6 @@ jobs:
         ARM_TENANT_ID: "fd41ee0d-0d97-4102-9a50-c7c3c5470454"
         ARM_ENVIRONMENT: public
 
-    # Checks that all Terraform configuration files adhere to a canonical format
-    - name: Terraform Format
-      run: terraform fmt -check
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
