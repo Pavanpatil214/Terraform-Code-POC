@@ -40,10 +40,10 @@ jobs:
       run: terraform init
       env:
         ARM_SUBSCRIPTION_ID: "727e5622-2c60-4022-809b-79b8670e3a6d"
-        ARM_CLIENT_ID: "0d95a0b4-e452-4763-9a8a-ac73fa502365"
-        ARM_CLIENT_SECRET: "Jaz8Q~yRHmMnwGK~Ue8YpiqqxfnDB7IvIcWTDcQ0"
+        ARM_CLIENT_ID: "016a5ddf-517e-4c49-937a-689e42e52465"
+        ARM_CLIENT_SECRET: "IsI8Q~GHbVvRGrRm7w6E3aagbVQQbLyvRofV2ckM"
         ARM_TENANT_ID: "fd41ee0d-0d97-4102-9a50-c7c3c5470454"
-        ARM_ENVIRONMENT: public
+        ARM_ENVIRONMENT: dev
 
 
     # Generates an execution plan for Terraform
